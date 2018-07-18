@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Cinema.Repo.Data;
 using Cinema.Repo.Models;
+using Cinema.Repo.Filters;
 
 namespace Cinema.Repo.Controllers
 {
@@ -19,7 +20,9 @@ namespace Cinema.Repo.Controllers
             _context = context;
         }
 
+        [MovieFilter("Iulia")] 
         public IActionResult Index() {
+            Console.WriteLine("In index");
             return View();
         }
     }

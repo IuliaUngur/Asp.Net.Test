@@ -12224,11 +12224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iulia.ungur\\Downloads\\ASP.Net Core Test App\\MVCAuthCinema\\MVCAuthCinema\\Cinema.Repo.csproj",
+      "projectUniqueName": "C:\\Users\\iulia.ungur\\Downloads\\ASP.Net Core Test App\\SampleProject\\MVCAuthCinema\\MVCAuthCinema\\Cinema.Repo.csproj",
       "projectName": "Cinema.Repo",
-      "projectPath": "C:\\Users\\iulia.ungur\\Downloads\\ASP.Net Core Test App\\MVCAuthCinema\\MVCAuthCinema\\Cinema.Repo.csproj",
+      "projectPath": "C:\\Users\\iulia.ungur\\Downloads\\ASP.Net Core Test App\\SampleProject\\MVCAuthCinema\\MVCAuthCinema\\Cinema.Repo.csproj",
       "packagesPath": "C:\\Users\\iulia.ungur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iulia.ungur\\Downloads\\ASP.Net Core Test App\\MVCAuthCinema\\MVCAuthCinema\\obj\\",
+      "outputPath": "C:\\Users\\iulia.ungur\\Downloads\\ASP.Net Core Test App\\SampleProject\\MVCAuthCinema\\MVCAuthCinema\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

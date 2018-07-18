@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Cinema.Repo.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Cinema.Repo.Filters;
 
 namespace Cinema.Repo
 {
@@ -41,7 +42,9 @@ namespace Cinema.Repo
                 fbOptions.AppSecret = Configuration["Auth:Facebook:AppSecret"];
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(options => {
+                options.Filters.Add(typeof(GlobalFilter));
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

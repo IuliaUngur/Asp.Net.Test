@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cinema.Repo", "MVCAuthCinem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cinema.Web", "MVCAuthCinema.Api\Cinema.Web.csproj", "{9C3106BC-1485-49EC-8B1A-78B81EF2205C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServerTest", "IdentityServerTest\IdentityServerTest.csproj", "{A561C680-C277-4D98-8824-5DF42F1FB0F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{4732056E-2491-4BFF-9357-06A30203C031}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9C3106BC-1485-49EC-8B1A-78B81EF2205C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C3106BC-1485-49EC-8B1A-78B81EF2205C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C3106BC-1485-49EC-8B1A-78B81EF2205C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A561C680-C277-4D98-8824-5DF42F1FB0F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A561C680-C277-4D98-8824-5DF42F1FB0F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A561C680-C277-4D98-8824-5DF42F1FB0F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A561C680-C277-4D98-8824-5DF42F1FB0F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4732056E-2491-4BFF-9357-06A30203C031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4732056E-2491-4BFF-9357-06A30203C031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4732056E-2491-4BFF-9357-06A30203C031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4732056E-2491-4BFF-9357-06A30203C031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
