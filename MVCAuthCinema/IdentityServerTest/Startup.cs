@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 
 namespace IdentityServerTest
 {
@@ -23,6 +25,39 @@ namespace IdentityServerTest
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients())
                 .AddTestUsers(Config.GetUsers());
+
+            services.AddAuthentication()
+                .AddGoogle("Google", options =>
+                {
+                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+
+                    options.ClientId = "434483408261-55tc8n0cs4ff1fe21ea8df2o443v2iuc.apps.googleusercontent.com";
+                    options.ClientSecret = "3gcoTrEDPPJ0ukn_aYYT6PWo";
+                })
+                .AddOpenIdConnect("oidc", "OpenID Connect", options =>
+                 {
+                     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                     options.SignOutScheme = IdentityServerConstants.SignoutScheme;
+
+                     options.Authority = "https://demo.identityserver.io/";
+                     options.ClientId = "implicit";
+
+                     options.TokenValidationParameters = new TokenValidationParameters
+                     {
+                         NameClaimType = "name",
+                         RoleClaimType = "role"
+                     };
+                 })
+                 .AddFacebook(options =>
+                 {
+                     options.AppId = "2093034407575016";
+                     options.AppSecret = "5b837607e036810570b9f8fa930555ee";
+                 });
+        }
+        
+        private void AddOpenIdConnect(string v1, string v2, Func<object, object> p)
+        {
+            throw new NotImplementedException();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
